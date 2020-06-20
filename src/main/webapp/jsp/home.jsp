@@ -11,14 +11,12 @@
     <div>
         <h1>WELCOME</h1>
     </div>
-    <div></div>
+    <div>
+        <div><a href="SignUp">Sign up</a></div>
+    </div>
 </header>
 
 <main>
-        <%
-
-
-        %>
     <div id="login">
         <form method="POST" action="ValidateUser">
             <h2>LOGIN</h2>

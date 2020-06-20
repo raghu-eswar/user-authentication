@@ -31,4 +31,13 @@
     <url-pattern>/Home</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>signUp</servlet-name>
+    <jsp-file>/jsp/signUp.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>signUp</servlet-name>
+    <url-pattern>/SignUp</url-pattern>
+  </servlet-mapping>
+
 </web-app>
