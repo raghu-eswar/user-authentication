@@ -79,7 +79,7 @@
           <version>2.2</version>
           <configuration>
             <uriEncoding>UTF-8</uriEncoding>
-            <path>/AddressBook</path>
+            <path>/Login</path>
             <update>true</update>
           </configuration>
         </plugin>
