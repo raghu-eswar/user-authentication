@@ -2,6 +2,7 @@
 <html>
 
 <head>
+     <title>Log in</title>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styles.css">
 </head>
 
