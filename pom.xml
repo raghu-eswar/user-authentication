@@ -79,7 +79,7 @@
           <version>2.2</version>
           <configuration>
             <uriEncoding>UTF-8</uriEncoding>
-            <path>/Login</path>
+            <path>/Login.com</path>
             <update>true</update>
           </configuration>
         </plugin>

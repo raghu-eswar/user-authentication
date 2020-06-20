@@ -15,7 +15,7 @@
 
 <main>
     <div id="login">
-        <form method="POST">
+        <form method="POST" action="ValidateUser">
             <h2>LOGIN</h2>
             <div id="lock-icon"><i class="fa fa-lock"></i></div>
             <div class="form-input"><input type="email" name="email" placeholder="Email" class="form-input-field" required></div>
