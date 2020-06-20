@@ -16,10 +16,10 @@ public class ValidateUser extends HttpServlet {
         String emailId = request.getParameter("email");
         String password = request.getParameter("password");
         User user = new UserDao().createUser(emailId, password);
-
         if (user != null)
-            response.sendRedirect("Home");
+            response.sendRedirect("Profile");
         else
-            response.sendRedirect("Login");
+            response.sendRedirect("Home");
     }
+
 }
