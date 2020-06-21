@@ -1,3 +1,4 @@
+<%@ page import="com.login.model.User" %>
 <!DOCTYPE html>
 <html>
 
@@ -6,15 +7,26 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styles.css">
 </head>
 
-<header>
-    <div>
-        <h1>WELCOME</h1>
-    </div>
-    <div></div>
-</header>
+<body>
+    <%
+        User user = (User) session.getAttribute("user");
+        if (user == null)
+            response.sendRedirect("Home");
+    %>
 
-<main>
+    <header>
+        <div>
+            <h1>WELCOME</h1>
+        </div>
+        <div>
+            <div><button onclick="logOut()" class="logout-button">Log out</button></div>
+        </div>
+    </header>
 
-</main>
+    <main>
+
+    </main>
+
+</body>
 
 </html>

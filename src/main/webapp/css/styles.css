@@ -20,7 +20,8 @@ a {
     cursor: pointer;
 }
 
-a:hover {
+a:hover,
+.logout-button:hover {
     color: wheat;
 }
 
@@ -72,6 +73,15 @@ main {
     justify-items: center;
 }
 
+.logout-button {
+    color: white;
+    font-size: 26px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+
 input {
     height: 40px;
     border-style: groove;
@@ -102,6 +112,7 @@ input:hover {
     border-radius: 30px;
 }
 
-a:active {
+a:active,
+.logout-button:active {
     transform: translateY(1px);
 }
