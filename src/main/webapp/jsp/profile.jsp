@@ -3,12 +3,13 @@
 <html>
 
 <head>
-     <title>Profile</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styles.css">
 </head>
 
 <body>
     <%
+        response.setHeader("Cache-Control", "no-store");
         User user = (User) session.getAttribute("user");
         if (user == null)
             response.sendRedirect("Home");
@@ -19,7 +20,7 @@
             <h1>WELCOME</h1>
         </div>
         <div>
-            <div><button onclick="logOut()" class="logout-button">Log out</button></div>
+           <div><a href="LogOut">Log out</a></div>
         </div>
     </header>
 
