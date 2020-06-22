@@ -17,3 +17,23 @@ function validateEmail(event) {
         }
     }
 }
+
+function validatePassword(event) {
+    var passwordField = event.target;
+    var submitButton = passwordField.parentElement.parentElement.getElementsByClassName("form-submit-button")[0];
+    var errorMessageField = passwordField.parentElement.parentElement.querySelector("#error-message");
+
+    if (/^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{5,}$/.test(passwordField.value)) {
+        passwordField.style.color = "black";
+        errorMessageField.innerHTML = "";
+        submitButton.disabled = false;
+    } else {
+        errorMessageField.innerHTML = "please enter valied password";
+        passwordField.style.color = "red";
+        submitButton.disabled = true;
+        if (passwordField.oninput === null) {
+            passwordField.removeEventListener("blur", validatePassword);
+            passwordField.addEventListener("input", validatePassword);
+        }
+    }
+}

@@ -23,7 +23,7 @@
             <h2>LOGIN</h2>
             <div id="lock-icon"><i class="fa fa-lock"></i></div>
             <div class="form-input"><input type="email" name="email" placeholder="Email" class="form-input-field" onblur="validateEmail(event)" required></div>
-            <div class="form-input"><input type="password" name="password" placeholder="Password" class="form-input-field" required></div>
+            <div class="form-input"><input type="password" name="password" placeholder="Password" class="form-input-field" onblur="validatePassword(event)" required></div>
             <div id="error-message"></div>
             <div class="form-input"><input type="submit" value="Log in" class="form-submit-button"></div>
         </form>
