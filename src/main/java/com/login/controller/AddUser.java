@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet("/AddUser")
@@ -19,8 +20,10 @@ public class AddUser extends HttpServlet {
         boolean status = new UserDao().addUser(firstName.toUpperCase() +" "+ lastName.toUpperCase(), emailId, password);
         if (status)
             response.sendRedirect("Home");
-        else
+        else {
+            HttpSession session = request.getSession();
+            session.setAttribute("errorMessage", "Sign up failed try again");
             response.sendRedirect("SignUp");
-
+        }
     }
 }

@@ -17,13 +17,15 @@ public class ValidateUser extends HttpServlet {
         String emailId = request.getParameter("email");
         String password = request.getParameter("password");
         User user = new UserDao().createUser(emailId, password);
+        HttpSession session = request.getSession();
         if (user != null) {
-            HttpSession session = request.getSession();
             session.setAttribute("user", user);
             response.sendRedirect("Profile");
         }
-        else
+        else {
+            session.setAttribute("errorMessage", "email id or password not valid");
             response.sendRedirect("Home");
+        }
     }
 
 }

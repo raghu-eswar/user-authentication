@@ -24,7 +24,16 @@
             <div id="lock-icon"><i class="fa fa-lock"></i></div>
             <div class="form-input"><input type="email" name="email" placeholder="Email" class="form-input-field" onblur="validateEmail(event)" required></div>
             <div class="form-input"><input type="password" name="password" placeholder="Password" class="form-input-field" onblur="validatePassword(event)" required></div>
-            <div id="error-message"></div>
+            <div id="error-message">
+             <%
+                 String errorMessage = (String) session.getAttribute("errorMessage");
+                     if (errorMessage != null) {
+             %>
+                 <%=errorMessage%>
+                     <%
+                        session.removeAttribute("errorMessage");
+                     }%>
+            </div>
             <div class="form-input"><input type="submit" value="Log in" class="form-submit-button"></div>
         </form>
     </div>
