@@ -53,7 +53,7 @@
   </dependencies>
 
   <build>
-    <finalName>AddressBook</finalName>
+    <finalName>Login</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
